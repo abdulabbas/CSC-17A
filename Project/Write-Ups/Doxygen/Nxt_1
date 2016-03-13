@@ -1,0 +1,399 @@
+Project1 
+
+Title
+PIG: The Rolling Dice Game_V1
+
+Course
+CSC-17A
+
+Class 
+Fall Semester 
+
+Course Code
+48983
+
+Due Date
+10/25/15 
+Author
+Abdul Hakim Abbas
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Table of Contents
+
+Introduction
+
+How to play
+
+Pseudo-code 
+
+Flowchart
+
+Variable List
+
+Resources
+
+Checklist
+
+Copy of the code 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Introduction:
+
+This project is based on a rolling dice game called Pig.  Pig is a very simple game which was introduced in the Mid 1900's.  The game involves a little bit of strategy, but it involves a lot more on your intuition and when to push your luck or to not push it. This has been programed to be played by a human player and a computer player against each other. And it will ask the user for a bet, which then is either will be won by the human player which will double that bet as that player has won the bet.  Otherwise the user will lose to the computer player. It 
+involves the player to hold or roll on their two turns, also the computer gets two turns.
+
+How to play:
+
+Pig is played with one die.
+Each turn, a player repeatedly rolls a die until either a One is rolled, or the player holds and scores the sum of the rolls (i.e. turn total).  At any time a player is faced with two options.
+
+Roll: If the player rolls
+1: The 1st player(person) scores nothing and it will become the 2nd players(computer)
+turn.
+2 to 6: The number is added to the player's turn total and the player's turn continues.
+Hold: The turn total is added to the player's score and it becomes the next player's turn.
+
+The 1st player to score a 100 or more points wins.
+
+Example of this is that the first player (user) is a roll that is 5. They could hold and score a 5, but choose to roll again. They roll a 2, and can hold with a total of 7 points, but choose to roll again.
+They roll a 1, and must end their turn without scoring.  The next player rolls the sequence 4-5-3-5-5, after which they choose to hold, and it adds their turn total of 22 points to their score.
+Since, we don't have a die for this program, the user will simply be typing their action (“1” for roll, and “2” for hold).
+
+Pseudo-code:
+Do {
+While (user hasn’t won or lost yet) {
+		If (user’s turn) {
+			Do  {
+				If (action == 1) {
+					Random dice value
+					Dice value += turnTotal
+				}
+				else if {action ==2) {
+					userScore += turnTotal
+					if (userScore > 100){
+						win = true
+					}
+				}
+			while (valid input && user’s turn && won/loss != true)
+		else if (! User’s turn) {
+			Do {
+				random number 1-4
+				if (random number == 1-3) {
+					random dice value
+					dice value += turnTotal
+				}
+				else if (random number ==4) {
+					compScore += turntTotal
+					if (comScore > 100) {
+						loss = true
+					}
+				}
+			while (! User’s turn && won/loss != true)
+} 
+play again? ‘y’ or ‘n’
+while (play again == ‘y’)
+
+Flowchart:
+
+Variable List:
+
+
+Int choice
+Picks 1-4 in main menu
+Char playAgain
+Choice variable for playing multiple games
+Float moneyWon
+will be either positive/negative if win/lose
+Int gamesPlayed = 0
+keeps track of total games played
+Float betHistory[10]
+holds all moneyWon values across games
+Const int ROWS = 50
+Const for maximum estimated number of turns by user
+char rollHistory[ROWS][COLS]
+2D array for sorting ‘R’ -> ‘H’ and ‘6’ -> ‘1’
+Int I = 0
+Counter for bet history
+float total
+will calculate sum of all moneyWon across games and print on “receipt” file 
+float bet
+Money bet that user gambles each game
+int dice
+Will hold all values 1-6
+short action
+Used for “Roll” or “Hold” options
+bool userTurn = true
+When userTurn is true, it is the user’s turn to roll or hold.  If false, computer’s turn to roll or hold
+int compScore = 0
+int userScore = 0
+Overall scores for each game.  Turn total added to these after “hold” option is picked
+const int GOAL = 100
+Game usually ends once player passes GOAL mark
+bool win = false
+bool lose = false
+If user wins, win = true. Opposite for lose.
+Either of these turning “true” will end all turns and complete the game
+int j = 0
+Counter variable for rollHistory[][]
+int turnTotal = 0
+Added for each dice value != 1.  This can potentially be converted to overall score.
+bool rolled = false
+Keeps track if a roll has occurred for turn.  At least one roll required in order to “hold”
+char dice
+Variable used in to “probability checker” 
+int throws
+Number of loops user wants “p. checker” to do
+char throwAgain
+Option to run “p. checker” again
+ifstream inFile
+Controls the file “HowToPlay” text
+int wordCount
+will help fit block of text inside output parameter
+bool swap
+Bubble sort main variable
+int temp
+Holds smaller bubble sort value
+ofstream outputFile
+Controls the file “receipt.txt”
+Fstream binaryFile
+Controls the file “test.txt”
+Int sides
+Number of sides on randomly-sided dice
+Int *a
+Pointer to unsorted dice throws
+Struct Throwresults
+float avg; //holds average of dice throws
+    float median; // holds median of dice throws
+    int *mode;   //array containing the modes
+    int nModes;  //number of modes in the array
+    int maxFreq; //max frequency of modes
+Struct User
+string name;     //user name
+    int age;      //age
+    string race;    //race
+    string gender;   //gender
+    Day favoriteDay;  //Monday through sunday
+    bool pass;    //if user passed test
+Throwresults *pointer
+Pointer to Throwresults structure
+Throwresults temp
+Temporary structure within function
+Int *b
+Pointer to sorted array
+Throwresults throwresults
+Structure for passing to function and printing results
+
+
+
+
+Resources:
+
+For most of the research to help in coding this game was from Gaddis and I had also utilized websites like Stack overflow, and Git-Hub, and so may other sites. 
+
+Reference:
+"Pig." Snake Eyes Yard Dice Page « Snake Eyes Yard Dice. N.p., n.d. Web. 20 July 2014.
+Checklist:
+
+Chapter 2:
+int     38
+float     60
+bool     54
+char     92
+initialization     94
+arithmetic operators     662
+comments     551
+named constants      23
+strings     340
+
+Chapter 3:
+ cin object     86
+type casting     80
+formatting output     332
+mathematical expressions     503
+
+Chapter 4:
+relational operators     300
+if statement     90
+nested if statement     103
+switch menu     58
+
+Chapter 5:
+increment     149
+decrement
+while loop     88
+counters     491
+do while loop     96
+for loop     578
+
+Chapter 6:
+function prototypes      21
+pass by value     31
+returning booleon value     29
+local variable     72
+global variable
+default arguments     29
+pass by reference     29
+exit() function
+stubs and drivers
+
+Chapter 7:
+array initialization     374
+2D arrays     61
+arrays as function arguments     61
+
+Chapter 8:
+searching
+sorting     762
+
+Chapter 9:
+address operator      793
+pointers     445
+pointer notation     707
+dynamic memory allocation     766
+pointer initialization     
+pointers as function parameters  39
+returning pointers     40
+pointers to constants
+
+Chapter 10:
+Character testing     498
+Case conversion     453
+C-strings     496
+String member functions
+
+Chapter 11: 
+Structures     32
+Pointers within structures     35
+Accessing structure members using dot operators     474
+Array of structures     465
+Structures as function argument     42
+Returning pointer to structure     39
+Dynamically allocating array of structures     465
+Enumerated data types     43
+
+Chapter 12:
+Passing file stream objects to functions
+Write to binary file     396
+Read from binary file     414
+
+Chapter 13 - 16:
+Abstract class: “Score.h” line 12
+Base class: “Dice.h” line 12
+Derived class:  “Dice.h” line 17
+Template class: main.cpp line 63
+Exception: main.cpp line 120
+
+
+Additional Information:                                                  Line #:   
+System Level Libraries
+iostream
+all
+iomanip
+502
+cstdlib
+80
+ctime
+80
+fstream
+324
+Cctype
+498
+
+Data Types
+int
+63
+float
+62
+short
+73
+bool
+74
+const
+65
+char
+61
+Enum Day
+43
+
+Operators
+==
+88
+&&
+88
+%
+97
++=
+118
+++
+149
+||
+175
+< 
+300
+!
+382
+<=
+393
+*
+503
+&
+793
+.
+474

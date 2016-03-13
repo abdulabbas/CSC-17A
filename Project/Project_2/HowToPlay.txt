@@ -1,0 +1,9 @@
+During user turn, the user repeatedly rolls a die until either a 1 is rolled or the player holds and scores the sum of the rolls (i.e. the turn total). 
+At any time during a user turn, the user is faced with two options:* roll * If the user rolls a* 1: the user scores nothing and computer turn begins. 
+2,3,4,5,6: the number is added to the user turn total and the user turn continues.* hold * The turn total is added to the user score and computer turn begins. 
+Once computer turn begins all the user has to do is press [enter] to see the outcome of the computer turn.
+The first to score 100 or more points wins.EXAMPLE: the first player begins a turn with a roll of 5. 
+They could hold and score 5 points, but choose to roll again. 
+They roll a 2, and can hold with a turn total of 7 points, but choose to roll again. 
+They roll a 1, and must end their turn without scoring. 
+The next player rolls the sequence 4-5-3-5-5, after which they choose to hold, and adds their turn total of 22 points to their score.

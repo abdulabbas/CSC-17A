@@ -1,0 +1,1 @@
+all these sentences are meant to be written in all lower-case letters.hopefully the conversion will work and place capital letters on the first letter of each sentence.i also found that program 12-12 in the book does not work on net beans.it looks like it's working but why is it putting an extra character at the end?

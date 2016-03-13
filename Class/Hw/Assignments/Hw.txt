@@ -1,0 +1,13 @@
+Hmwk: Convert structure notation to the dot operator and the array notation to pointer notation.
+ 
+Projects look on Git-Hub.
+ 
+Ass_4 upload it when done with Homework.
+ 
+Study for tests.
+ 
+Prepare for Midterm, and Final.
+
+Ass_4/Homework --> Due by 10/9/15
+
+Project 1 --> Due by 10/25/15
